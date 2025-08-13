@@ -1,3 +1,3 @@
-import numpy as np
 def solution(numbers):
-    return int(np.prod(sorted(numbers)[-1:-3:-1]))
+    numbers.sort()
+    return max([numbers[i] * numbers[i + 1] for i in range(0,len(numbers) - 1)])
